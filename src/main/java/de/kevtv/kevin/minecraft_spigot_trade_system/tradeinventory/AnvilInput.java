@@ -17,8 +17,8 @@ import java.util.UUID;
 public class AnvilInput {
 
     private AnvilGUI inventory;
-    private int moneyOfUser;
-    private int money;
+    private double moneyOfUser;
+    private double money;
     private boolean closing;
     private Player player;
     public boolean inMode;
@@ -87,11 +87,11 @@ public class AnvilInput {
                 .open(getPlayer());
     }
 
-    public int getMoneyOfUser() {
+    public double getMoneyOfUser() {
         return moneyOfUser;
     }
 
-    public void setMoneyOfUser(int moneyOfUser) {
+    public void setMoneyOfUser(double moneyOfUser) {
         this.moneyOfUser = moneyOfUser;
     }
 }

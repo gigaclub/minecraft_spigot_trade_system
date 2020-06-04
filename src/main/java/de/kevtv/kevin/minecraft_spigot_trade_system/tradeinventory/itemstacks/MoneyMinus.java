@@ -33,19 +33,19 @@ public class MoneyMinus {
         return moneyAmount;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         moneyAmount.setMoney(money);
     }
 
-    public void addMoney(int moneyToAdd) {
+    public void addMoney(double moneyToAdd) {
         moneyAmount.addMoney(moneyToAdd);
     }
 
-    public void remMoney(int moneyToRem) {
+    public void remMoney(double moneyToRem) {
         moneyAmount.remMoney(moneyToRem);
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return moneyAmount.getMoney();
     }
 

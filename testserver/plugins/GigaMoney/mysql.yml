@@ -1,0 +1,7 @@
+GigaMoney:
+  MySQL:
+    Host: localhost
+    Port: '3306'
+    User: root
+    Datenbank: gigamoneytest
+    Passwort: root

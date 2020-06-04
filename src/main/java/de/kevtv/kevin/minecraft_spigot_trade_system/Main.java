@@ -3,9 +3,8 @@ package de.kevtv.kevin.minecraft_spigot_trade_system;
 import de.kevtv.kevin.minecraft_spigot_trade_system.commands.TradeAcceptCommand;
 import de.kevtv.kevin.minecraft_spigot_trade_system.commands.TradeCommand;
 import de.kevtv.kevin.minecraft_spigot_trade_system.commands.TradeDenyCommand;
-import de.kevtv.kevin.minecraft_spigot_trade_system.config.MySQLConfig;
 import de.kevtv.kevin.minecraft_spigot_trade_system.config.TextConfig;
-import de.kevtv.kevin.minecraft_spigot_trade_system.data.MySQL;
+import de.kevtv.kevin.minecraft_spigot_trade_system.data.Vault;
 import de.kevtv.kevin.minecraft_spigot_trade_system.listener.InventoryListener;
 import de.kevtv.kevin.minecraft_spigot_trade_system.listener.TradeAcceptListener;
 import de.kevtv.kevin.minecraft_spigot_trade_system.tradeinventory.TradeInventory;
@@ -26,10 +25,11 @@ public final class Main extends JavaPlugin {
 
         setPlugin(this);
 
-        MySQLConfig.setMySQLConfig();
-        MySQL.connectToMySQL();
-
-        MySQL.setupMySQLTables();
+        if (!Vault.setupEconomy() ) {
+            System.out.println((String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName())));
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 
         setTextConfig();
         registerCommands();
@@ -43,7 +43,6 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        MySQL.disconnectMySQL();
     }
 
     /**

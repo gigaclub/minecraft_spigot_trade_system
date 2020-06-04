@@ -1,0 +1,46 @@
+trade-no-player: §cDu bist kein Spieler!
+trade-no-permissions: §cDu hast keine Berechtigung diesen Command zu nutzen!
+trade-wrong-arguments: §cDer Command heißt /trade <Spielername>!
+trade-player-is-not-online: §cDer Spieler %s ist nicht online!
+trade-player-does-not-exist: §cDer Spieler %s existiert nicht!
+trade-send-request: Die Tradeanfrage wurde an %s gesendet!
+trade-new-trade-request: Du hast eine Tradeanfrage von %s!
+trade-request-sended-earlier: Du hast bereits eine Tradeanfrage an %s gesendet!
+trade-no-own-request: §cDu kannst dir selber keine Tradeanfrage senden!
+trade-you-have-already-a-request: §c%s hat dir bereits eine Tradeanfrage gesendet!
+tradeAccept-no-player: §cDu bist kein Spieler!
+tradeAccept-no-permissions: §cDu hast keine Berechtigung diesen Command zu nutzen!
+tradeAccept-wrong-arguments: §cDer Command heißt /tradeaccept <Spielername>!
+tradeAccept-player-is-not-online: §cDer Spieler %s ist nicht online!
+tradeAccept-player-does-not-exist: §cDer Spieler %s existiert nicht!
+tradeAccept-trade-successfull: Der Trade mit %s kann losgehen!
+tradeAccept-trade-not-successfull: §cDu hast keine Tradeanfrage von %s!
+trade-trade-accepted: Der Trade mit %s kann losgehen!
+tradeDeny-no-player: §cDu bist kein Spieler!
+tradeDeny-no-permissions: §cDu hast keine Berechtigung diesen Command zu nutzen!
+tradeDeny-wrong-arguments: §cDer Command heißt /tradedeny <Spielername>!
+tradeDeny-player-is-not-online: §cDer Spieler %s ist nicht online!
+tradeDeny-player-does-not-exist: §cDer Spieler %s existiert nicht!
+tradeDeny-trade-not-denied: §cDu hast keine Tradeanfrage von %s!
+tradeDeny-trade-was-denied: Der Trade mit %s wurde abgelehnt!
+trade-trade-denied: '%s hat deine Tradeanfrage abgelehnt!'
+tradeAcceptListener-player-quit: §cDer Spieler %s hat den Server verlassen und dadurch
+  wird die Tradeanfrage gelöscht!
+tradeInventory-inventory-name: Trade Inventar
+tradeInventory-border-name: Border
+tradeInventory-moneyAmount-name: '%s Geos'
+tradeInventory-moneyMinus-name: Minus 100 Geos
+tradeInventory-moneyPlus-name: Plus 100 Geos
+tradeInventory-anvilInventory-name: 'Geos angeben:'
+tradeInventory-notReady-state-name: Nicht Bereit
+tradeInventory-ready-state-name: Bereit
+tradeInventory-notReadyTimer-state-name: Niemand ist bereit
+tradeInventory-oneIsReadyTimer-state-name: Warte auf %s!
+tradeInventory-done-state-name: Trade!
+tradeInventory-timer-countdown: In %s Sekunden fertig!
+inventoryListener-closed-inventory: §cDein Tradepartner %s hat das Trade Inventar
+  geschlossen und damit den Tausch beendet!
+inventoryListener-you-closed-inventory: §cDu hast dein Trade Inventar geschlossen
+  und damit den Tausch mit %s beendet!
+inventoryListener-to-much: §cZu viel!
+inventoryListener-that-is-not-your-item: §cDas ist nicht dein Item!

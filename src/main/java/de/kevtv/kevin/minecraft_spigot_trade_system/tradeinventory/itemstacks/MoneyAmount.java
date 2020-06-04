@@ -2,7 +2,7 @@ package de.kevtv.kevin.minecraft_spigot_trade_system.tradeinventory.itemstacks;
 
 import de.kevtv.kevin.minecraft_spigot_trade_system.commands.TradeAcceptCommand;
 import de.kevtv.kevin.minecraft_spigot_trade_system.config.TextConfig;
-import de.kevtv.kevin.minecraft_spigot_trade_system.data.MySQL;
+import de.kevtv.kevin.minecraft_spigot_trade_system.data.Vault;
 import de.kevtv.kevin.minecraft_spigot_trade_system.helper.HashMapHelper;
 import de.kevtv.kevin.minecraft_spigot_trade_system.listener.TradeAcceptListener;
 import org.bukkit.Bukkit;
@@ -20,10 +20,10 @@ public class MoneyAmount {
     private ItemStack moneyAmount;
     private ItemMeta moneyAmountMeta;
     private Player player;
-    private int money;
+    private double money;
     private int slot;
     private Inventory inventory;
-    private int playerMoneyAmount;
+    private double playerMoneyAmount;
 
     public MoneyAmount(Player player, int slot) {
         setPlayer(player);
@@ -40,31 +40,31 @@ public class MoneyAmount {
         setMoney(0);
     }
 
-    public int getPlayerMoneyAmount() {
+    public double getPlayerMoneyAmount() {
         return playerMoneyAmount;
     }
 
     public void setPlayerMoneyAmount() {
-        this.playerMoneyAmount = MySQL.getMoneyOfPlayer(player);
+        this.playerMoneyAmount = Vault.getMoneyOfPlayer(player);
         System.out.println(playerMoneyAmount);
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         this.money = money;
         setMoneyAmountDisplayName();
     }
 
-    public void addMoney(int moneyToAdd) {
+    public void addMoney(double moneyToAdd) {
         this.money += moneyToAdd;
         setMoneyAmountDisplayName();
     }
 
-    public void remMoney(int moneyToRem) {
+    public void remMoney(double moneyToRem) {
         this.money -= moneyToRem;
         setMoneyAmountDisplayName();
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 

@@ -3,7 +3,7 @@ package de.kevtv.kevin.minecraft_spigot_trade_system.tradeinventory.itemstacks;
 import de.kevtv.kevin.minecraft_spigot_trade_system.Main;
 import de.kevtv.kevin.minecraft_spigot_trade_system.commands.TradeAcceptCommand;
 import de.kevtv.kevin.minecraft_spigot_trade_system.config.TextConfig;
-import de.kevtv.kevin.minecraft_spigot_trade_system.data.MySQL;
+import de.kevtv.kevin.minecraft_spigot_trade_system.data.Vault;
 import de.kevtv.kevin.minecraft_spigot_trade_system.helper.HashMapHelper;
 import de.kevtv.kevin.minecraft_spigot_trade_system.listener.InventoryListener;
 import de.kevtv.kevin.minecraft_spigot_trade_system.listener.TradeAcceptListener;
@@ -191,14 +191,14 @@ public class ReadyTimer {
         }
         for (int i = 0; i < TradeInventory.moneyAmounts.size(); i++) {
             if (TradeInventory.moneyAmounts.get(i).getPlayer() == ready1.getPlayer()) {
-                MySQL.addMoneyOfPlayer(ready2.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
-                MySQL.remMoneyOfPlayer(ready1.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
+                Vault.addMoneyOfPlayer(ready2.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
+                Vault.remMoneyOfPlayer(ready1.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
             }
         }
         for (int i = 0; i < TradeInventory.moneyAmounts.size(); i++) {
             if (TradeInventory.moneyAmounts.get(i).getPlayer() == ready2.getPlayer()) {
-                MySQL.addMoneyOfPlayer(ready1.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
-                MySQL.remMoneyOfPlayer(ready2.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
+                Vault.addMoneyOfPlayer(ready1.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
+                Vault.remMoneyOfPlayer(ready2.getPlayer(), TradeInventory.moneyAmounts.get(i).getMoney());
             }
         }
         InventoryListener.finished = true;
@@ -208,6 +208,7 @@ public class ReadyTimer {
         TradeInventory.clearArrays(ready1.getPlayer());
         TradeInventory.clearArrays(ready2.getPlayer());
         TradeAcceptCommand.tradeInventoryHashMap.remove(tradeInvPlayer);
+        TradeAcceptListener.removeTradeRequest(ready1.getPlayer().getUniqueId().toString(), ready2.getPlayer().getUniqueId().toString());
     }
 
 }

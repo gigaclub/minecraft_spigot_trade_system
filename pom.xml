@@ -6,7 +6,7 @@
 
     <groupId>de.KevTV.Kevin.Minecraft_Spigot_Trade_System</groupId>
     <artifactId>TradeSystem</artifactId>
-    <version>1.0.2</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>TradeSystem</name>
@@ -24,7 +24,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -33,7 +33,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>3.2.2</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -41,10 +41,8 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>
-                                C:\Users\kevin\Documents\GigaClub.net\Minecraft\TradeSystem 1.14.4 Minecraft
-                                Testserver\plugins
-                            </outputDirectory>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <outputDirectory>C:\Users\nethe\IdeaProjects\minecraft_spigot_trade_system\testserver\plugins</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -75,15 +73,21 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.14.4-R0.1-SNAPSHOT</version>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.WesJD.AnvilGUI</groupId>
             <artifactId>anvilgui</artifactId>
-            <version>478e0c196e</version>
+            <version>61aa6d8080</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

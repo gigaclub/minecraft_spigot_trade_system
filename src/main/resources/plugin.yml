@@ -4,7 +4,9 @@ main: de.kevtv.kevin.minecraft_spigot_trade_system.Main
 api-version: 1.13
 authors: [KevTVKevin]
 description: Ein TradeSystem für Minecraft Spigot 1.14.4
-website: https://KevTV.de
+website: https://GigaClub.net
+depend:
+  - Vault
 
 commands:
   trade:
