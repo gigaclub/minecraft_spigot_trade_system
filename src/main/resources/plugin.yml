@@ -1,0 +1,31 @@
+name: TradeSystem
+version: ${project.version}
+main: de.kevtv.kevin.minecraft_spigot_trade_system.Main
+api-version: 1.13
+authors: [KevTVKevin]
+description: Ein TradeSystem für Minecraft Spigot 1.14.4
+website: https://GigaClub.net
+depend:
+  - Vault
+
+commands:
+  trade:
+    description: /trade <Spielername>
+  tradeAccept:
+    description: /tradeaccept <Spielername>
+  tradeDeny:
+    description: /tradedeny <Spielername>
+
+permissions:
+  trade.*:
+    default: op
+    children:
+      trade.trade: true
+      trade.accept: true
+      trade.deny: true
+  trade.trade:
+    default: notop
+  trade.accept:
+    default: notop
+  trade.deny:
+    default: notop
